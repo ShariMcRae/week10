@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Tracker</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <body class="container">
+    <h1 class="pt-3">Wellness Tracker</h1>
+    <form>
+      <div class="row pb-4">
+        <div class="col-sm pt-2">
+          <label for="date" class="form-label">Date</label>
+          <input type="date" class="form-control" id="date" />
+        </div>
+
+        <div class="col-sm pt-2">
+          <label for="slept" class="form-label text-nowrap">Hours Slept</label>
+          <input type="text" class="form-control" id="slept" />
+        </div>
+
+        <div class="col-sm pt-2">
+          <label for="energy" class="form-label">Energy</label>
+          <select class="form-select" id="energy" aria-label="energy">
+            <option selected></option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col pb-4">
+          <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </form>
+
+    <table id="list" class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Hours Slept</th>
+          <th>Energy</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="wellness.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
